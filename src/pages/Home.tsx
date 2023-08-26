@@ -4,7 +4,7 @@ import Card from "../components/Card";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Spinner from "../components/Spinner";
-// import { clearVideos } from "../store";
+import { clearVideos } from "../store";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { getHomePageVideos } from "../store/reducers/getHomPageVideos";
 import { HomePageVideos } from "../types";
@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     return () => {
-      // dispatch(clearVideos());
+      dispatch(clearVideos());
     };
   }, [dispatch]);
 
